@@ -1,4 +1,4 @@
-//mixins
+//mixins ( used for reusable blocks of Codes)
 
 @mixin banner {
 	width: 100%;
@@ -21,5 +21,14 @@
 	span.title {
 		font-weight: normal;
 		margin-bottom: 30px;
+	}
+}
+
+@mixin clearFix {
+	//adding pseudo classes (Clear fix rule)
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
 	}
 }
