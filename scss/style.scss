@@ -11,7 +11,7 @@
 	}
 	li {
 		float: left;
-		//usnig matematical oppression
+		//using mathematical Expressions
 		width: (100% / 6);
 	}
 	a {
@@ -23,7 +23,7 @@
 
 		//adding psuedo classes
 		&:hover {
-			background: #333;
+			background: lighten($deepblue, 4); //adding some color functionss
 		}
 	}
 } // end main nav
@@ -66,10 +66,18 @@ section h1 {
 		color: $deepblue;
 		font-weight: bold;
 		&:hover {
-			color: red;
+			color: complement($deepblue); //color function
 		}
 	}
 	ul {
 		@include clearFix;
+	}
+}
+
+//passing variables to arg
+#projects li {
+	@include grid(2, 8%);
+	img {
+		width: 100%;
 	}
 }
